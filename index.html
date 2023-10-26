@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>webpage</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="https://www.linkedin.com/in/trixieag/">
+                    <img src="C:\webpage\images\logo.png" width="75px" height="75px" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">TRAVEL PACKAGE</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <img src="C:\webpage\images\menu.png" width="75px" height="75px" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h2>Wonderland Indonesia</h2>
+                    <p>Indonesia is the most beautiful land in the universe. The land where we were born.
+                    The nation where we grew up. So many colours that lived together in peace
+                    with a million timeless treasures & an abundance of natural wealth.
+                    Indonesia is not just wonderful, Indonesia is a wonderland -Alffy Rev</p>
+                    <button type="button">Explore</button>
+                </div>
+                <div class="col">
+                    <h3 class="subsection-title">Contact Us</h3>
+                    <p>Our team will contact you within 1x24 hours after receive your data</p>
+                    <form class="contact-form" name="contact-form" onsubmit="return validateForm()">
+                        <div class="form-field">
+                            <label for="name" class="input-label">Your name:</label>
+                            <input type="text" id="name" name="name" class="input-field" placeholder="First name and last name" oninput="fillInput('name')" />
+                            <p class="error-msg" id="name-error">Please fill your name</p>
+                        </div>
+                        <div class="form-field">
+                            <label for="email" class="input-label">Email Address:</label>
+                            <input type="text" id="email" name="email" class="input-field" placeholder="example@email.com" oninput="fillInput('email')" />
+                            <p class="error-msg" id="email-error">Please fill your email with a correct format</p>
+                        </div>
+                        <div class="form-field">
+                            <label for="interest" class="input-label">What are you interested in?</label>
+                            <select id="interest" name="interest" class="input-field" oninput="selectInterest()">
+                                <option value="none" selected disabled>Select your destination</option>
+                                <option value="option 1">Arts & Culture</option>
+                                <option value="option 2">Beach & Sea</option>
+                                <option value="option 3">Mountain & Jungle</option>
+                            </select>
+                            <p class="error-msg" id="interest-error">Please select one interest</p>
+                        </div>
+                        <button type="submit" class="button">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="package" id="our-package">
+                <div class="package-banner">
+                    <div class="container">
+                        <h2 class="section-title">Our Packages</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="package-list">
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="compass"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Candi Borobudur</h3>
+                                <p>The world's largest Buddhist temple is a stunning architectural and artistic masterpiece, 
+                                also a testament to Indonesia's history and cultural heritage (Magelang, Central Java).</p>
+                            </div>
+                        </div>
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="compass"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Pura Ulun Danu Bratan</h3>
+                                <p>The largest Hindu worship place in Bali and a cultural tourist destination with
+                                stunning views (Tabanan, Bali).</p>
+                            </div>
+                        </div>
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="compass"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Nusa Penida</h3>
+                                <p>Filled with a great number of breathtaking attractions. Here, you can explore the stunning
+                                vast highlands and roam around the spectacular beaches decorating the edges of the island
+                                (Kepulauan Nusa Tenggara).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border" />
+                    <div class="package-list">
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="star"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Raja Ampat</h3>
+                                <p>You will find a pristine paradise where Mother Nature and warm friendly people
+                                welcome you with all the exceptional wonders where words such as beautiful, enchanting,
+                                magnificent, and fascinating get its true physical meaning (West Papua Province).</p>
+                            </div>
+                        </div>
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="star"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Candi Prambanan</h3>
+                                <p>Prambanan Temple is the largest Hindu-style temple in Indonesia and
+                                also designated a World Cultural Heritage by UNESCO (Central Java).</p>
+                            </div>
+                        </div>
+                        <div class="package-item">
+                            <div class="package-icon">
+                                <i data-feather="star"></i>
+                            </div>
+                            <div class="package-content">
+                                <h3>Komodo Island</h3>
+                                <p>Komodo island is one of the wonders in the world because it is a natural habitat
+                                for Komodo dragons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta" id="call-us">
+                <div class="container">
+                    <h2 class="section-title">Talk with Us</h2>
+                    <p>Needs help? Click button below</p>
+                    <button class="button">Contact Us</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="logo">
+                    <img src="C:\webpage\images\logo.png" width="75px" height="75px" class="logo">
+                </div>
+                <ul class="footer-navigation">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <div>© 2023 trixie.ag</div>
+            </div>
+        </footer>
+
+        <script>
+            feather.replace();
+        </script>
+        <script src="js/validation.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/slideShow.js"></script>
+    </body>
+</html>
